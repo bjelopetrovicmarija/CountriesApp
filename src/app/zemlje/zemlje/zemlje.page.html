@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Spisak zemalja</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar placeholder="Pronađi zemlju" color="light"></ion-searchbar>
+  <div>
+    <app-country-card *ngFor="let zemlja of zemlje | async"
+    [zemlja]="zemlja"
+
+    >
+
+
+    </app-country-card>
+  </div>
+
+</ion-content>
